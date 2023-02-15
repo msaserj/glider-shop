@@ -8,7 +8,6 @@ function App() {
   return (
       <BrowserRouter>
           <div className="App">
-              <h1>Glider Shop</h1>
               <Routes>
                   <Route path={paths.home} element={<HomePage/>}/>
               </Routes>
