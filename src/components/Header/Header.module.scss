@@ -1,56 +1,56 @@
 .header {
-   height: 45vh;
-   position: relative;
-   display: flex;
-   align-items: center;
-   background: linear-gradient(180deg, #fff 0%, #2c2c2c 100%);
-   overflow: hidden;
-   flex-direction: column;
-   //max-width: calc(100% - 50px);
-   //width: 100%;
-   margin: 0 auto;
-   padding: 0 30px;
-   z-index: 2;
-   .title {
-      margin-bottom: 50px;
-      font-size: 60px;
+  height: 45vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #fff 0%, #2c2c2c 100%);
+  overflow: hidden;
+  flex-direction: column;
+  //max-width: calc(100% - 50px);
+  //width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  z-index: 2;
+  .title {
+    margin-bottom: 50px;
+    font-size: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .description {
+    margin-bottom: 80px;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn {
+    from {
       opacity: 0;
       transform: translateY(20px);
-      animation-duration: 1s;
-      animation-delay: 0.5s;
-      animation-name: fadeIn;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-   }
-   .description {
-      margin-bottom: 80px;
-      font-size: 30px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation-duration: 1s;
-      animation-delay: 1s;
-      animation-name: fadeIn;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-   }
-   @keyframes fadeIn {
-      from {
-         opacity: 0;
-         transform: translateY(20px);
-      }
-      to {
-         opacity: 1;
-         transform: translateY(0);
-      }
-   }
-   .pic {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 1920px;
-      height: 430px;
-      opacity: 0.6;
-      z-index: -1;
-   }
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1920px;
+    height: 430px;
+    opacity: 0.6;
+    z-index: -1;
+  }
 }

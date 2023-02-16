@@ -8,18 +8,18 @@ import { Header } from './components/Header/Header';
 import { NewGlider } from './components/NewGlider/NewGlider';
 
 function App() {
-   return (
-      <BrowserRouter>
-         <div className="App">
-            <Header />
-            <Routes>
-               <Route path={paths.home} element={<HomePage />} />
-               <Route path={`${paths.glider}/:id`} element={<GliderPage />} />
-               <Route path={paths.createGlider} element={<NewGlider />} />
-            </Routes>
-         </div>
-      </BrowserRouter>
-   );
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path={paths.home} element={<HomePage />} />
+          <Route path={`${paths.glider}/:id`} element={<GliderPage />} />
+          <Route path={paths.createGlider} element={<NewGlider />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
