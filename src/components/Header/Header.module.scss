@@ -8,8 +8,8 @@
   background: linear-gradient(180deg, #fff 0%, #2c2c2c 100%);
   overflow: hidden;
   flex-direction: column;
-  max-width: calc(100% - 50px);
-  width: 100%;
+  //max-width: calc(100% - 50px);
+  //width: 100%;
   margin: 0 auto;
   padding: 0 30px;
   z-index: 2;
@@ -48,9 +48,12 @@
   }
   .pic {
     position: absolute;
-    top: -200px;
-    width: 100%;
-    height: auto;
-    opacity: 0.5;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width: 1920px;
+    height: 430px;
+    opacity: 0.6;
+    z-index: -1;
   }
 }

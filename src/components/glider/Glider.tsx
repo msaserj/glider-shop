@@ -1,5 +1,5 @@
 import React from 'react';
-import {GliderType} from "../../gliders/glidersSlice";
+import {GliderType} from "../../store/gliders/glidersSlice";
 import {Link} from 'react-router-dom'
 import {paths} from '../../paths'
 import css from './Glider.module.scss'

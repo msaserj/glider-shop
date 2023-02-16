@@ -1,9 +1,11 @@
 import {combineReducers, configureStore, ThunkAction} from "@reduxjs/toolkit";
-import {gliderReducer} from "../gliders/glidersSlice";
+import {glidersReducer} from "./gliders/glidersSlice";
 import thunkMiddleware from 'redux-thunk'
+import {gliderReducer} from "./glider/gliderSlice";
 
 export const rootReducer = combineReducers({
-    gliders: gliderReducer
+    gliders: glidersReducer,
+    glider: gliderReducer,
 })
 
 export const store = configureStore({

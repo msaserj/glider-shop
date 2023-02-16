@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {glidersApi} from "../api/api";
+import {glidersApi} from "../../api/api";
 
 export const getGliders = createAsyncThunk('gliders',
     async (_, thunkAPI)=>{
@@ -40,7 +40,7 @@ const glidersSlice = createSlice({
     }
 })
 
-export const gliderReducer = glidersSlice.reducer
+export const glidersReducer = glidersSlice.reducer
 
 export type GliderType = {
     _id: string

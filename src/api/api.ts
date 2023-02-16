@@ -9,5 +9,9 @@ const apiInstance = ky.create({
 export const glidersApi = {
     getGliders() {
         return apiInstance.get('gliders')
+    },
+    getGlider(id: string) {
+        return apiInstance.get(`gliders/${id}`)
     }
 }
+

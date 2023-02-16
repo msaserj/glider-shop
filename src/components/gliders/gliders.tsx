@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
-import {getGliders, GliderType} from "../../gliders/glidersSlice";
+import {getGliders, GliderType} from "../../store/gliders/glidersSlice";
 import {Loader} from "../loader/Loader";
 import {Glider} from "../glider/Glider";
 import  css from './gliders.module.scss'

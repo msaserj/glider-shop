@@ -1,5 +1,5 @@
 import {useMemo, useState} from "react";
-import {GliderType} from "../gliders/glidersSlice";
+import {GliderType} from "../store/gliders/glidersSlice";
 
 
 export const useSort = (items: GliderType[]) => {
