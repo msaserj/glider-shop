@@ -1,5 +1,5 @@
 export const paths = {
-    home: '/',
-    glider: '/glider',
-    createGlider: 'createglider'
-}
+   home: '/',
+   glider: '/glider',
+   createGlider: 'createglider'
+};

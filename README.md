@@ -1,13 +1,13 @@
 <h1 align="center">Glider Shop</h1>
 <h2 align="center">
 
-[//]: # ([![Mentioned in Awesome Vue.js]&#40;https://awesome.re/mentioned-badge.svg&#41;]&#40;https://github.com/vuejs/awesome-vue&#41;)
+[//]: # '[![Mentioned in Awesome Vue.js](https://awesome.re/mentioned-badge.svg)](https://github.com/vuejs/awesome-vue)'
 
 </h2>
 
 <p align="center">
 
-[//]: # (<img src="https://img.shields.io/npm/dy/msaserj">)
+[//]: # '<img src="https://img.shields.io/npm/dy/msaserj">'
 
 <img src="https://img.shields.io/badge/made%20by-msaserj-blue.svg" >
 
@@ -23,16 +23,14 @@
 
 </p>
 
-
-[//]: # (<h2 align="center"><a  href="">Live Demo</a></h2>)
-
-[//]: # (### [Contributions are Welcome]&#40;https://github.com/silent-lad/VueSolitaire/blob/master/CONTRIBUTING.md&#41;)
+[//]: # '<h2 align="center"><a  href="">Live Demo</a></h2>'
+[//]: # '### [Contributions are Welcome](https://github.com/silent-lad/VueSolitaire/blob/master/CONTRIBUTING.md)'
 
 ## Description
 
 **Glider Shop.**
 
-[//]: # (<p align="center"><img src="" width="80%"></p>)
+[//]: # '<p align="center"><img src="" width="80%"></p>'
 
 ## About the project.
 
@@ -40,11 +38,7 @@ Glider-shop
 
 ## Technologies
 
-**React**,
-**Redux**,
-**Redux-Toolkit**,
-**TS**,
-**SCSS**.
+**React**, **Redux**, **Redux-Toolkit**, **TS**, **SCSS**.
 
 ## Project setup
 
@@ -52,15 +46,15 @@ Glider-shop
 npm install
 npm run serve
 ```
+
 #### use yarn
+
 ```
 yarn
 yarn start
 ```
 
 ## Future scope
-
-
 
 ## My Home Page
 
