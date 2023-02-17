@@ -1,6 +1,6 @@
 .header {
   .photoBlock {
-    height: 42vh;
+    height: 400px;
     position: relative;
     display: flex;
     align-items: center;
@@ -15,6 +15,8 @@
     .title {
       margin-bottom: 50px;
       font-size: 60px;
+      color: #d7d7d7;
+      font-weight: 400;
       opacity: 0;
       transform: translateY(20px);
       animation-duration: 1s;
@@ -25,6 +27,7 @@
     }
     .description {
       margin-bottom: 80px;
+      color: #d7d7d7;
       font-size: 30px;
       opacity: 0;
       transform: translateY(20px);
@@ -50,7 +53,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 1920px;
-      height: 42vh;
+      height: 400px;
 
       z-index: -1;
       -webkit-animation: imagesFading 32s infinite;
@@ -90,6 +93,8 @@
   }
   .menu {
     height: 60px;
+    border-top: 3px solid #fc0;
+    background: #434343;
     padding: 0 10% 0 10%;
     display: flex;
     align-items: center;
