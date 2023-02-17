@@ -30,6 +30,11 @@
 
 **Glider Shop.**
 
+Some original photos I use from [alexander-schleicher.de](https://www.alexander-schleicher.de)
+
+Alexander Schleicher is the oldest sailplane producer of the world. With the production of 70 sailplanes and
+motorgliders in a year, Alexander Schleicher is one of the global leaders.
+
 [//]: # '<p align="center"><img src="" width="80%"></p>'
 
 ## About the project.

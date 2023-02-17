@@ -1,5 +1,6 @@
 export const paths = {
   home: '/',
   glider: '/glider',
-  createGlider: 'createglider'
+  createGlider: 'createglider',
+  cart: 'cart'
 };

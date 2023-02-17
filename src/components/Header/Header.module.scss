@@ -1,56 +1,99 @@
 .header {
-  height: 45vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(180deg, #fff 0%, #2c2c2c 100%);
-  overflow: hidden;
-  flex-direction: column;
-  //max-width: calc(100% - 50px);
-  //width: 100%;
-  margin: 0 auto;
-  padding: 0 30px;
-  z-index: 2;
-  .title {
-    margin-bottom: 50px;
-    font-size: 60px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-name: fadeIn;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-  .description {
-    margin-bottom: 80px;
-    font-size: 30px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-name: fadeIn;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-  @keyframes fadeIn {
-    from {
+  .photoBlock {
+    height: 42vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #fff 0%, #2c2c2c 100%);
+    overflow: hidden;
+    flex-direction: column;
+    //max-width: calc(100% - 50px);
+    //width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    z-index: 2;
+    .title {
+      margin-bottom: 50px;
+      font-size: 60px;
       opacity: 0;
       transform: translateY(20px);
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+      animation-name: fadeIn;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    .description {
+      margin-bottom: 80px;
+      font-size: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-name: fadeIn;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .pic {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1920px;
+      height: 42vh;
+
+      z-index: -1;
+      -webkit-animation: imagesFading 32s infinite;
+      -moz-animation: imagesFading 32s infinite;
+      -o-animation: imagesFading 32s infinite;
+      animation: imagesFading 32s infinite;
+      @keyframes imagesFading {
+        0% {
+          opacity: 1;
+        }
+        17% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 0;
+        }
+        92% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    .pic1 {
+      animation-delay: 24s;
+    }
+    .pic2 {
+      animation-delay: 16s;
+    }
+    .pic3 {
+      animation-delay: 8s;
+    }
+    .pic4 {
+      animation-delay: 0s;
     }
   }
-  .pic {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1920px;
-    height: 430px;
-    opacity: 0.6;
-    z-index: -1;
+  .menu {
+    height: 60px;
+    padding: 0 10% 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 20px;
   }
 }

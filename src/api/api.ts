@@ -11,7 +11,7 @@ export const glidersApi = {
     return apiInstance.get('/gliders').then(res => res.data);
   },
   getGlider(id: string) {
-    return apiInstance.get(`/gliders/${id}`);
+    return apiInstance.get(`/gliders/${id}`).then(res => res.data);
   },
   createGlider(glider: GliderType) {
     return apiInstance.post(`/gliders`, glider, {

@@ -14,21 +14,18 @@ export const NewGlider = () => {
   const formik = useFormik({
     initialValues: {
       name: '',
-      price: 0,
+      price: null,
       description: '',
       addDescription: '',
-      range: 0,
+      range: null,
       gliderImg: null
     },
 
     onSubmit: (values: any) => {
-      const formData = new FormData();
-
       dispatch(createGlider(values));
+      formik.resetForm();
     }
   });
-  console.log('AAAAAAAAAAAAAA', formik.values.gliderImg);
-  console.log('BBBBBBBBBB', formik.values.name);
 
   return (
     <div>

@@ -6,6 +6,7 @@ import { paths } from './paths';
 import { GliderPage } from './pages/GliderPage/GliderPage';
 import { Header } from './components/Header/Header';
 import { NewGlider } from './components/NewGlider/NewGlider';
+import { Cart } from './pages/CartPages/Cart';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path={paths.home} element={<HomePage />} />
           <Route path={`${paths.glider}/:id`} element={<GliderPage />} />
           <Route path={paths.createGlider} element={<NewGlider />} />
+          <Route path={paths.cart} element={<Cart />} />
         </Routes>
       </div>
     </BrowserRouter>
