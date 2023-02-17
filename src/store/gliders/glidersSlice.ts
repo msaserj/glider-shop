@@ -1,9 +1,9 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { glidersApi } from '../../api/api';
 
-export const getGliders = createAsyncThunk<InitialStateType>('gliders', async (_, thunkAPI) => {
+export const getGliders = createAsyncThunk('gliders', async (_, thunkAPI) => {
   try {
-    return await glidersApi.getGliders().json();
+    return await glidersApi.getGliders();
   } catch (e: any) {
     return thunkAPI.rejectWithValue(e.response.data);
   }
@@ -39,10 +39,11 @@ const glidersSlice = createSlice({
 export const glidersReducer = glidersSlice.reducer;
 
 export type GliderType = {
-  _id: string;
+  _id?: string;
   name: string;
   price: number;
   description: string;
+  addDescription: string;
   range: number;
   gliderImg: string;
   __v?: number;

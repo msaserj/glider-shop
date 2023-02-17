@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import css from './GliderPage.module.scss';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
-import { getGlider, GliderType } from '../../store/glider/gliderSlice';
+import { getGlider } from '../../store/glider/gliderSlice';
 import { Loader } from '../../components/loader/Loader';
+import { GliderType } from '../../store/gliders/glidersSlice';
 
 export const GliderPage = () => {
   const navigate = useNavigate();

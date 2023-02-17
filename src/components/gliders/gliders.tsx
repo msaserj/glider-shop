@@ -26,7 +26,9 @@ export const Gliders = () => {
   return (
     <div>
       <div className={css.sortBar}>
-        <button onClick={() => setIsDescSort(!isDescSort)}>Sort by price {`${isDescSort ? ' up' : ' down'}`}</button>
+        <button onClick={() => setIsDescSort(!isDescSort)}>
+          Sort by price {`${isDescSort ? ' up' : ' down'}`}
+        </button>
         <Link to={paths.createGlider}>Create glider</Link>
       </div>
       <div className={css.gliders}>
@@ -41,6 +43,7 @@ export const Gliders = () => {
                 name={glider.name}
                 price={glider.price}
                 range={glider.range}
+                addDescription={glider.addDescription}
               />
             );
           })}
