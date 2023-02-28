@@ -41,9 +41,15 @@ motorgliders in a year, Alexander Schleicher is one of the global leaders.
 
 Glider-shop
 
+[back-end](https://github.com/msaserj/glider-shop-back)
+
 ## Technologies
 
-**React**, **Redux**, **Redux-Toolkit**, **TS**, **SCSS**.
+**React**,
+**Redux**,
+**Redux-Toolkit**,
+**TS**,
+**SCSS**.
 
 ## Project setup
 

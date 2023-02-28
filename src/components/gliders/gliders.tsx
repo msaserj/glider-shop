@@ -40,10 +40,10 @@ export const Gliders = () => {
                 _id={glider._id}
                 description={glider.description}
                 gliderImg={glider.gliderImg}
-                name={glider.name}
+                make={glider.make}
                 price={glider.price}
-                range={glider.range}
-                addDescription={glider.addDescription}
+                list={glider.list}
+                model={glider.model}
               />
             );
           })}

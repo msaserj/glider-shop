@@ -40,12 +40,27 @@ export const glidersReducer = glidersSlice.reducer;
 
 export type GliderType = {
   _id?: string;
-  name: string;
+  make: string;
+  model: string;
   price: number;
   description: string;
-  addDescription: string;
-  range: number;
   gliderImg: string;
+  //Tech data
+  list: {
+    fullDescription: string;
+    glideRatio: string;
+    motor: string;
+    seats: number;
+    fuselageLength: number;
+    maxSpeed: number;
+    emptyMass: number;
+    maxTakeOfMass: number;
+    year: number;
+    oxygen: string;
+    trailer: string;
+    engine: string;
+  };
+
   __v?: number;
 };
 

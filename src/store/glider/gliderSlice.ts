@@ -12,6 +12,7 @@ export const getGlider = createAsyncThunk('glider', async (id: string, thunkAPI)
 export const createGlider = createAsyncThunk(
   'createGlider',
   async (glider: GliderType, thunkAPI) => {
+    console.log('thunk', glider);
     try {
       return await glidersApi.createGlider(glider);
     } catch (e: any) {

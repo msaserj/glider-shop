@@ -2,10 +2,12 @@ import { combineReducers, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { glidersReducer } from './gliders/glidersSlice';
 import thunkMiddleware from 'redux-thunk';
 import { gliderReducer } from './glider/gliderSlice';
+import { cartReducer } from './cart/cartSlice';
 
 export const rootReducer = combineReducers({
   gliders: glidersReducer,
-  glider: gliderReducer
+  glider: gliderReducer,
+  cart: cartReducer
 });
 
 export const store = configureStore({

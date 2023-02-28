@@ -25,8 +25,8 @@ export const GliderPage = () => {
     glider && (
       <div className={css.glider}>
         <button onClick={() => navigate(-1)}>Go back</button>
-        <h1 className={css.title}>{glider.name}</h1>
-        <img style={{ width: '250px', height: '150px' }} src={glider.gliderImg} alt={glider.name} />
+        <h1 className={css.title}>{glider.make}</h1>
+        <img style={{ width: '250px', height: '150px' }} src={glider.gliderImg} alt={glider.make} />
         <p>{glider.price}</p>
         <p>{glider.description}</p>
         <button>To cart</button>

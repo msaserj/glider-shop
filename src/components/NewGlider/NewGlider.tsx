@@ -5,6 +5,7 @@ import { Input } from './Input/Input';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { useFormik } from 'formik';
 import { createGlider } from '../../store/glider/gliderSlice';
+import { GliderType } from '../../store/gliders/glidersSlice';
 
 export const NewGlider = () => {
   const navigate = useNavigate();
@@ -13,20 +14,32 @@ export const NewGlider = () => {
 
   const formik = useFormik({
     initialValues: {
-      name: '',
-      price: null,
+      make: '',
+      model: '',
+      price: 0,
       description: '',
-      addDescription: '',
-      range: null,
-      gliderImg: null
+      gliderImg: '',
+      list: {
+        fullDescription: '',
+        glideRatio: '',
+        motor: '',
+        seats: 0,
+        fuselageLength: 0,
+        maxSpeed: 0,
+        emptyMass: 0,
+        maxTakeOfMass: 0,
+        year: 0,
+        oxygen: '',
+        trailer: '',
+        engine: ''
+      }
     },
 
-    onSubmit: (values: any) => {
+    onSubmit: (values: GliderType) => {
       dispatch(createGlider(values));
       formik.resetForm();
     }
   });
-
   return (
     <div>
       <button onClick={() => navigate(-1)}>{'<-- Go back'}</button>
@@ -35,15 +48,23 @@ export const NewGlider = () => {
       <div>
         <form className={css.form} onSubmit={formik.handleSubmit}>
           <Input
-            htmlFor={'name'}
-            label={'name'}
-            getFieldProps={formik.getFieldProps('name')}
-            errors={formik.errors.name}
-            name={'name'}
-            placeholder={'name'}
+            htmlFor={'make'}
+            label={'make'}
+            getFieldProps={formik.getFieldProps('make')}
+            errors={formik.errors.make}
+            name={'make'}
+            placeholder={'make'}
           />
           <Input
-            type={'number'}
+            type={'text'}
+            htmlFor={'model'}
+            label={'model'}
+            getFieldProps={formik.getFieldProps('model')}
+            errors={formik.errors.model}
+            name={'model'}
+            placeholder={'model'}
+          />
+          <Input
             htmlFor={'price'}
             label={'price'}
             getFieldProps={formik.getFieldProps('price')}
@@ -59,24 +80,6 @@ export const NewGlider = () => {
             name={'description'}
             placeholder={'description'}
           />
-          <Input
-            htmlFor={'addDescription'}
-            label={'addDescription'}
-            getFieldProps={formik.getFieldProps('addDescription')}
-            errors={formik.errors.addDescription}
-            name={'addDescription'}
-            placeholder={'addDescription'}
-          />
-          <Input
-            type={'number'}
-            htmlFor={'range'}
-            label={'range'}
-            getFieldProps={formik.getFieldProps('range')}
-            errors={formik.errors.range}
-            name={'range'}
-            placeholder={'range'}
-          />
-
           <input
             id="file"
             name="gliderImg"
@@ -85,6 +88,127 @@ export const NewGlider = () => {
               formik.setFieldValue('gliderImg', e.currentTarget.files![0]);
             }}
           />
+          {/*techList*/}
+          {Object.keys(formik.initialValues.list).map((key, index) => {
+            return (
+              <Input
+                key={key}
+                htmlFor={key}
+                label={key}
+                type={'text'}
+                getFieldProps={formik.getFieldProps('list.' + key)}
+              />
+            );
+          })}
+
+          {/*<Input*/}
+          {/*    type={'text'}*/}
+          {/*    htmlFor={'fullDescription'}*/}
+          {/*    label={'fullDescription'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.fullDescription')}*/}
+          {/*    errors={formik.errors.list?.fullDescription}*/}
+          {/*    name={'fullDescription'}*/}
+          {/*    placeholder={'fullDescription'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'text'}*/}
+          {/*    htmlFor={'glideRatio'}*/}
+          {/*    label={'glideRatio'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.glideRatio')}*/}
+          {/*    errors={formik.errors.list?.glideRatio}*/}
+          {/*    name={'glideRatio'}*/}
+          {/*    placeholder={'glideRatio'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'text'}*/}
+          {/*    htmlFor={'motor'}*/}
+          {/*    label={'motor'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.motor')}*/}
+          {/*    errors={formik.errors.list?.motor}*/}
+          {/*    name={'motor'}*/}
+          {/*    placeholder={'motor'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'number'}*/}
+          {/*    htmlFor={'seats'}*/}
+          {/*    label={'seats'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.seats')}*/}
+          {/*    errors={formik.errors.list?.seats}*/}
+          {/*    name={'seats'}*/}
+          {/*    placeholder={'number'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'number'}*/}
+          {/*    htmlFor={'fuselageLength'}*/}
+          {/*    label={'fuselageLength'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.fuselageLength')}*/}
+          {/*    errors={formik.errors.list?.fuselageLength}*/}
+          {/*    name={'fuselageLength'}*/}
+          {/*    placeholder={'number'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'number'}*/}
+          {/*    htmlFor={'maxSpeed'}*/}
+          {/*    label={'maxSpeed'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.maxSpeed')}*/}
+          {/*    errors={formik.errors.list?.maxSpeed}*/}
+          {/*    name={'maxSpeed'}*/}
+          {/*    placeholder={'number'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'number'}*/}
+          {/*    htmlFor={'emptyMass'}*/}
+          {/*    label={'emptyMass'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.emptyMass')}*/}
+          {/*    errors={formik.errors.list?.emptyMass}*/}
+          {/*    name={'emptyMass'}*/}
+          {/*    placeholder={'emptyMass'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'number'}*/}
+          {/*    htmlFor={'maxTakeOfMass'}*/}
+          {/*    label={'maxTakeOfMass'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.maxTakeOfMass')}*/}
+          {/*    errors={formik.errors.list?.maxTakeOfMass}*/}
+          {/*    name={'maxTakeOfMass'}*/}
+          {/*    placeholder={'number'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'number'}*/}
+          {/*    htmlFor={'year'}*/}
+          {/*    label={'year'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.year')}*/}
+          {/*    errors={formik.errors.list?.year}*/}
+          {/*    name={'year'}*/}
+          {/*    placeholder={'number'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'text'}*/}
+          {/*    htmlFor={'oxygen'}*/}
+          {/*    label={'oxygen'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.oxygen')}*/}
+          {/*    errors={formik.errors.list?.oxygen}*/}
+          {/*    name={'oxygen'}*/}
+          {/*    placeholder={'oxygen'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'text'}*/}
+          {/*    htmlFor={'trailer'}*/}
+          {/*    label={'trailer'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.trailer')}*/}
+          {/*    errors={formik.errors.list?.trailer}*/}
+          {/*    name={'trailer'}*/}
+          {/*    placeholder={'trailer'}*/}
+          {/*/>*/}
+          {/*<Input*/}
+          {/*    type={'text'}*/}
+          {/*    htmlFor={'engine'}*/}
+          {/*    label={'engine'}*/}
+          {/*    getFieldProps={formik.getFieldProps('list.engine')}*/}
+          {/*    errors={formik.errors.list?.engine}*/}
+          {/*    name={'engine'}*/}
+          {/*    placeholder={'engine'}*/}
+          {/*/>*/}
           <button type="submit">Create</button>
         </form>
       </div>
