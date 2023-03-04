@@ -2,8 +2,8 @@ import { GliderType } from '../store/gliders/glidersSlice';
 import axios from 'axios';
 
 const apiInstance = axios.create({
-  // baseURL: 'https://vds.msaserj.ru/api'
-  baseURL: 'http://localhost:3010/api'
+  baseURL: 'https://vds.msaserj.ru/api'
+  // baseURL: 'http://localhost:3010/api'
 });
 
 export const glidersApi = {

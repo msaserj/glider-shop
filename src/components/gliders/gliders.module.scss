@@ -8,9 +8,11 @@
 .gliders {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 400px;
+  box-sizing: border-box;
 }
