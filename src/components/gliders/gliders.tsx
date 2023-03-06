@@ -43,6 +43,7 @@ export const Gliders = () => {
                 price={glider.price}
                 list={glider.list}
                 model={glider.model}
+                count={glider.count}
               />
             );
           })}

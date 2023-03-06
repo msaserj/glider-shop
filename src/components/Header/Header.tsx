@@ -5,10 +5,13 @@ import pic2 from '../../assets/img/header-30-002.jpg';
 import pic3 from '../../assets/img/header-21B-001.jpg';
 import pic4 from '../../assets/img/header-29-003.jpg';
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useAppSelector } from '../../hooks/hooks';
+import { GliderType } from '../../store/gliders/glidersSlice';
 
 export const Header = () => {
-  const navigate = useNavigate();
+  const cart = useAppSelector<GliderType[]>(state => state.cart.gliders);
+
   return (
     <div className={css.header}>
       <div className={css.photoBlock}>
@@ -24,7 +27,7 @@ export const Header = () => {
 
       <div className={css.menu}>
         <Link className={css.cart} to="/cart">
-          <span>6 </span> Cart
+          <span>{cart ? cart.length : 0} </span> Cart
         </Link>
       </div>
     </div>

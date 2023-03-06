@@ -10,9 +10,7 @@ export const glidersApi = {
   getGliders() {
     return apiInstance.get('/gliders').then(res => res.data);
   },
-  getGlidersFromCart(ids: string | null) {
-    console.log(ids);
-    console.log(typeof ids);
+  getGlidersCart(ids: string | null) {
     return apiInstance.get(`/gliders/cart/${ids}`).then(res => res.data);
   },
   getGlider(id: string) {

@@ -47,6 +47,7 @@ export type GliderType = {
   price: number;
   description: string;
   gliderImg: string;
+  count: number;
   //Tech data
   list: {
     fullDescription: string;

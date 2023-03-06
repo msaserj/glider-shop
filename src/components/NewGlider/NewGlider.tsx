@@ -19,6 +19,7 @@ export const NewGlider = () => {
       price: 0,
       description: '',
       gliderImg: '',
+      count: 1,
       list: {
         fullDescription: '',
         glideRatio: '',
