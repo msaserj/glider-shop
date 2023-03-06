@@ -22,7 +22,6 @@ export const Gliders = () => {
   if (isLoading) {
     return <Loader />;
   }
-  console.log(gliders);
   return (
     <div>
       <div className={css.sortBar}>

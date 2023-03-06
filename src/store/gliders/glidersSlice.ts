@@ -28,7 +28,6 @@ const glidersSlice = createSlice({
     builder.addCase(getGliders.fulfilled, (state, action) => {
       state.isLoading = false;
       state.gliders = action.payload;
-      console.log(state.gliders);
     });
     builder.addCase(getGliders.rejected, (state, action) => {
       state.isLoading = false;

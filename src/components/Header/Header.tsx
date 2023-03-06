@@ -23,9 +23,8 @@ export const Header = () => {
       </div>
 
       <div className={css.menu}>
-        <Link to="/cart">
-          <span>6</span>
-          Cart
+        <Link className={css.cart} to="/cart">
+          <span>6 </span> Cart
         </Link>
       </div>
     </div>

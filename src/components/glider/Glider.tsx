@@ -17,9 +17,14 @@ export const Glider: React.FC<GliderType> = ({
     if (localStorage.getItem('cart')) {
       allGoods = JSON.parse(localStorage.getItem('cart') || '');
     }
-    if (!allGoods.includes(_id)) {
-      allGoods.push(_id);
+    console.log();
+    if (allGoods.find((el: { id: string | undefined }) => el.id === _id) === undefined) {
+      allGoods.push({ id: _id, count: 1 });
       localStorage.setItem('cart', JSON.stringify(allGoods));
+    } else {
+      const index = allGoods.findIndex((el: { id: string | undefined }) => el.id === _id);
+
+      localStorage.setItem('cart', JSON.stringify((allGoods[index] = { id: _id, count: +1 })));
     }
   };
   return (
@@ -32,10 +37,10 @@ export const Glider: React.FC<GliderType> = ({
           alt={make}
         />
         <div className={css.productList}>
-          <h3>name: {make}</h3>
+          <h3>{make}</h3>
           <p className={css.description}>glide ratio {list.glideRatio}</p>
           <p className={css.description}>{description}</p>
-          <p className={css.price}>€ {price}</p>
+          <p className={css.price}>€ {price.toLocaleString()}</p>
         </div>
       </Link>
       <button className={css.button} onClick={setToLocalStorage}>
